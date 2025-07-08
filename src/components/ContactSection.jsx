@@ -93,16 +93,16 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="/#/" target="_blank">
+                <a href="#" target="_blank">
                   <Linkedin />
                 </a>
-                <a href="/#/" target="_blank">
+                <a href="#" target="_blank">
                   <Twitter />
                 </a>
-                <a href="/#/" target="_blank">
+                <a href="#" target="_blank">
                   <Instagram />
                 </a>
-                <a href="/#/" target="_blank">
+                <a href="#" target="_blank">
                   <Twitch />
                 </a>
               </div>
@@ -130,7 +130,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Pedro Machado..."
+                  placeholder="please put your name..."
                 />
               </div>
 
@@ -148,7 +148,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  placeholder="example@gmail.com"
                 />
               </div>
 
@@ -165,7 +165,7 @@ export const ContactSection = () => {
                   name="message"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
-                  placeholder="Hello, I'd like to talk about..."
+                  placeholder="Drop your messages here..."
                 />
               </div>
 

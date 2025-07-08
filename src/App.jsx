@@ -9,7 +9,8 @@ function App() {
       <Toaster />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Home />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </>
   );

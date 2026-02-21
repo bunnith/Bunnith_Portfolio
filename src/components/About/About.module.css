@@ -1,0 +1,430 @@
+.aboutItem {
+  background-image: linear-gradient(
+    90deg,
+    rgba(165, 215, 232, 0.42) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+}
+
+.aboutItem:hover {
+  background-size: 100% 100%;
+}
+
+.aboutItemRight {
+  background-image: linear-gradient(
+    -90deg,
+    rgba(165, 215, 232, 0.42) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  background-position: right; /* important */
+  transition: background-size 0.4s ease;
+}
+
+.aboutItemRight:hover {
+  background-size: 100% 100%;
+}
+
+.aboutItemCenter {
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(165, 215, 232, 0.42) 50%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: center;
+  transition: background-size 0.4s ease;
+}
+
+.aboutItemCenter:hover {
+  background-size: 100% 100%;
+}
+
+.neonButton {
+  position: relative;
+  display: inline-block;
+  color: #0ff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: 0.375rem 1rem;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 0.375rem;
+}
+
+/* Default hover (cyan) */
+.default:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 5px #0ff, 0 0 25px #0ff, 0 0 50px #0ff, 0 0 200px #0ff;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+/* Pink hover */
+.pink:hover {
+  background: #ff00cc;
+  color: #000;
+  box-shadow: 0 0 5px #ff00cc, 0 0 25px #ff00cc, 0 0 50px #ff00cc, 0 0 200px #ff00cc;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+/* Green hover */
+.green:hover {
+  background: #00ff99;
+  color: #000;
+  box-shadow: 0 0 5px #00ff99, 0 0 25px #00ff99, 0 0 50px #00ff99, 0 0 200px #00ff99;
+ -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+/* Blue hover */
+.blue:hover {
+  background: #3399ff;
+  color: #000;
+  box-shadow: 0 0 5px #3399ff, 0 0 25px #3399ff, 0 0 50px #3399ff, 0 0 200px #3399ff;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.neonButton span {
+  position: absolute;
+  display: block;
+}
+
+.neonButton span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0ff);
+  animation: one 1s linear infinite;
+}
+
+.neonButton span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #0ff);
+  animation: two 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+.neonButton span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #0ff);
+  animation: three 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+.neonButton span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #0ff);
+  animation: four 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes one {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes two {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes three {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes four {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* Variant glow color overrides */
+.default span:nth-child(1),
+.pink span:nth-child(1) {
+  background: linear-gradient(90deg, transparent, #ff00cc);
+}
+.pink span:nth-child(2) {
+  background: linear-gradient(180deg, transparent, #ff00cc);
+}
+.pink span:nth-child(3) {
+  background: linear-gradient(270deg, transparent, #ff00cc);
+}
+.pink span:nth-child(4) {
+  background: linear-gradient(360deg, transparent, #ff00cc);
+}
+
+.green span:nth-child(1) {
+  background: linear-gradient(90deg, transparent, #00ff99);
+}
+.green span:nth-child(2) {
+  background: linear-gradient(180deg, transparent, #00ff99);
+}
+.green span:nth-child(3) {
+  background: linear-gradient(270deg, transparent, #00ff99);
+}
+.green span:nth-child(4) {
+  background: linear-gradient(360deg, transparent, #00ff99);
+}
+
+.blue span:nth-child(1) {
+  background: linear-gradient(90deg, transparent, #3399ff);
+}
+.blue span:nth-child(2) {
+  background: linear-gradient(180deg, transparent, #3399ff);
+}
+.blue span:nth-child(3) {
+  background: linear-gradient(270deg, transparent, #3399ff);
+}
+.blue span:nth-child(4) {
+  background: linear-gradient(360deg, transparent, #3399ff);
+}
+
+.pass {
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #9E2A2B, #6700A3, #683147FF, #9E6C6BFF);
+  -webkit-background-clip: text;
+   background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* for Safari */
+  color: transparent; /* fallback */
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes bounceLetter {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(-20px) scale(1.3);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(10px) scale(0.95);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.bounce-letter {
+  display: inline-block;
+  animation: bounceLetter 0.8s ease forwards;
+}
+
+@keyframes bounceHover {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-10px); }
+  50%  { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+.bounce-hover:hover {
+  animation: bounceHover 0.6s ease;
+}
+
+
+
+.gradientTitleWeb {
+  background: linear-gradient(90deg, #bb4143, #335C67, #E09F3E, #FFF3B0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradientTitleUI {
+  display: inline-block; /* important for text gradient to work */
+  background: linear-gradient(90deg, #070044, #7303C0, #EC38BC, #FFF3CC);
+  background-size: 400%; /* stretch gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+.gradientTitlePM {
+  background: linear-gradient(90deg, #915109, #6f752a, #EFC87D, #E2D8C3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradientText {
+  display: inline-block;
+  background: linear-gradient(90deg, #9E2A2B, #6700A3, #683147FF, #9E6C6BFF);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.gradientText {
+  background: linear-gradient(90deg, #FF5FA0, #79B9E1, #FCB5F8, #39F5DE);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientLoop 6s ease infinite;
+}
+
+@keyframes gradientLoop {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* About.module.css */
+
+
+
+
+/* @keyframes flashText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.flashText {
+  animation: flashText 1.2s infinite ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.shimmerText {
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #ff00cc 25%,
+    #00ccff 50%,
+    #ff00cc 75%,
+    #fff 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes typewriter {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.animate-typewriter {
+  animation: typewriter 2s steps(12, end) 1;
+}
+
+@keyframes blinkCaret {
+  50% { border-color: transparent }
+} */
+
+/* .typewriterWrapper {
+  display: inline-block;
+  position: relative;
+  min-width: 110px;
+  height: 1.5rem;
+}
+
+
+.typewriterText {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  animation:
+    typewriter 2s steps(20, end) forwards,
+    blinkCaret 0.75s step-end infinite;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+
+
+.flashText,
+.shimmerText,
+.typewriterText {
+  font-size: inherit;
+  display: inline-block;
+} */
+
+/* .typewriterText {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+  animation:
+    typewriter 2s steps(20) 0.3s forwards,
+    blinkCaret 0.75s step-end infinite;
+} */

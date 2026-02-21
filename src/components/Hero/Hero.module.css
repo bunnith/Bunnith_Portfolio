@@ -1,0 +1,100 @@
+.animatedText {
+  display: inline-block;
+  font-size: 55px;
+  font-weight: inherit;
+  min-width: 95px;
+  position: relative;
+  color: transparent;
+}
+
+.animatedText span {
+  position: relative;
+}
+
+.animatedText span::before {
+  content: "Developer";
+  background: linear-gradient(90deg, #050e4b, #6700A3, #683147FF, #9E6C6BFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: words 10s infinite;
+  display: inline-block;
+}
+
+.animatedText span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--typing-bg); /* <-- this now works */
+  border-left: 2px solid #ff7f50;
+  right: -8px;
+  animation: cursor 2.5s infinite, typing 10s steps(14) infinite;
+  z-index: 1;
+}
+
+@keyframes cursor {
+  to {
+    border-left-color: transparent;
+  }
+}
+
+@keyframes words {
+  0%, 25% {
+    content: "Developer";
+  }
+  26%, 50% {
+    content: "Frontend";
+  }
+  51%, 75% {
+    content: "Backend";
+  }
+  76%, 100% {
+    content: "Designer";
+  }
+}
+
+@keyframes typing {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 8px);
+  }
+}
+
+/* Letter-by-letter glow */
+.letters span {
+  color: #333;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  transition: all 0.4s ease;
+  user-select: none;
+}
+
+.letters {
+  white-space: nowrap;
+}
+
+.focus {
+  color: yellow !important;
+  text-shadow: 0 0 16px yellow !important;
+}
+
+.minusOne > span:first-child,
+.focus + span + span {
+  color: yellow !important;
+  text-shadow: 0 0 16px yellow !important;
+}
+
+.focus + span,
+.minusOne > span:nth-child(2) {
+  color: darkorange !important;
+  text-shadow: 0 0 16px darkorange !important;
+}
+
+.minusTwo > span:first-child {
+  color: yellow !important;
+  text-shadow: 0 0 16px yellow !important;
+}

@@ -11,6 +11,7 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
    base: "/",
   plugins: [react(), tailwindcss() ],
+  assetsInclude: ['**/*.wasm'],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -67,6 +67,10 @@
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
 
+    --typing-bg: hsl(var(--background));
+
+    --typing-bg: hsl(var(--background));
+
     --card: 0 0% 100%;
 
     --primary: 250 47% 60%;
@@ -78,6 +82,10 @@
   .dark {
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
+
+    --typing-bg: hsl(var(--background));
+
+    --typing-bg: hsl(var(--background));
 
     --card: 222 47% 8%;
 
@@ -98,6 +106,12 @@
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-yellow-500 bg-clip-text text-transparent;
   }
 }
 
@@ -163,4 +177,9 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Hide Spline logo watermark */
+iframe[src*="spline.design"] + div {
+  display: none !important;
 }

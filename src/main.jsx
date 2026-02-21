@@ -2,13 +2,16 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
+if ('scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual';
+}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>,
 );

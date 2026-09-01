@@ -1,4 +1,5 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 

@@ -1,13 +1,10 @@
-// src/components/Contact/ContactSection.jsx
 import {
-  Instagram,
-  Facebook,
   Mail,
   MapPin,
   Phone,
   Send,
 } from "lucide-react";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -52,21 +49,20 @@ export const ContactSection = () => {
     },
   ];
 
-  const socialLinks = [
-    {
-      icon: Facebook,
-      href: "https://www.facebook.com/narong.bunnith",
-    },
-    {
-      icon: FaTelegramPlane,
-      href: "https://t.me/BunnithContactBot",
-    },
-    {
-      icon: Instagram,
-      href: "#",
-    },
-  ];
-
+const socialLinks = [
+  {
+    icon: FaFacebook,
+    href: "https://www.facebook.com/narong.bunnith",
+  },
+  {
+    icon: FaTelegramPlane,
+    href: "https://t.me/BunnithContactBot",
+  },
+  {
+    icon: FaInstagram,
+    href: "#",
+  },
+];
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">

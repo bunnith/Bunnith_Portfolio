@@ -125,7 +125,7 @@ export const AboutSection = () => {
               whileInView="show"
               className="text-muted-foreground"
             >
-              With over 4 years of experience in web development, I specialize
+              With over 2 years of experience in web development, I specialize
               in creating responsive, accessible, and performant web
               applications using modern technologies.
             </motion.p>
@@ -153,7 +153,7 @@ export const AboutSection = () => {
 </NeonButton>
 
 <NeonButton
-  href="/NARONG_Bunnith_CV.pdf"
+  href="/NARONG_BUNNITH_CV.pdf"
   download
   variant="blue"
   animated
@@ -162,7 +162,7 @@ export const AboutSection = () => {
 </NeonButton>
 
 <NeonButton
-  href="/NARONG_Bunnith_CV.pdf"
+  href="/NARONG_BUNNITH_CV.pdf"
   target="_blank"
   rel="noopener noreferrer"
   variant="green"

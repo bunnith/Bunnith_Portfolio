@@ -1,4 +1,3 @@
-// src/components/Hero/HeroSection.jsx
 import { ArrowDown } from "lucide-react";
 import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
@@ -144,7 +143,7 @@ export const HeroSection = () => {
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
           <img
-            src="/e20210205.jpg"
+            src="/Narong_Bunnith_Photo.jpg"
             alt="Narong Bunnith"
             className="w-full h-full object-cover"
           />

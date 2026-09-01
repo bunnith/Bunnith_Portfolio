@@ -197,7 +197,7 @@ export const ProjectsSection = () => {
                       whileHover={{ scale: 1.2, rotate: -15 }}
                       whileTap={{ scale: 0.9 }}
                     >
-                      <Github size={20} />
+                      <FaGithub size={20} />
                     </motion.a>
                   </div>
                 </motion.div>
